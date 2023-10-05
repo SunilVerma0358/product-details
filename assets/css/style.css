@@ -162,40 +162,8 @@ nav ul li a:hover {
     width: 100%;
 }
 
-.fix1,
-.fix2,
-.fix3 {
-    transition: all 0.2s ease-in-out;
-}
-
-.left-corner {
-    left: 9px;
-}
-
-.fixer1 {
-    display: none;
-}
-
-.fixer2 {
-    transform: rotate(48deg) translate(3px, -1px);
-}
-
-.fixer3 {
-    transform: rotate(-45deg) translate(13px, -10px);
-}
-
 .over-flow {
     overflow: hidden;
-}
-
-.over-layer {
-    position: absolute;
-    width: 100%;
-    height: 1000%;
-    top: 0;
-    left: -100%;
-    background: #ffd3823c;
-    z-index: 1;
 }
 
 
@@ -437,46 +405,53 @@ ul li a {
 
 /* media_quary */
 
-@media (max-width:992px) {
-    label[id="nav"] {
-        width: 30px;
-        height: 24px;
-        cursor: pointer;
-        position: absolute;
-        right: 9px;
-        display: flex;
-        justify-content: space-between;
+.fixed1 {
+    display: none !important;
+}
+
+.fixed2 {
+    transform: rotate(50deg) translate(-1px, 10px);
+    width: 40px !important;
+}
+
+.fixed3 {
+    transform: rotate(-50deg) translate(-3px, -10px);
+    width: 40px !important;
+}
+
+.icon_box {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+    right: 3%;
+}
+
+.icon_box span {
+    width: 100%;
+    height: 4px;
+    display: flex;
+    background: gray;
+    margin-top: 5px !important;
+}
+
+@media (max-width:991.5px) {
+    .my_nav {
         flex-direction: column;
-        align-items: center;
-        z-index: 4;
-    }
-    label[id="nav"]>span {
-        width: 100%;
-        height: 5px;
-        background-color: var(--color-light-gray);
-    }
-    .left-corner {
-        left: 9px;
-    }
-    .menubar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 400px;
-        height: 100%;
-        background-color: var(--color-white);
         position: fixed;
+        width: 100%;
+        height: 110vh;
+        background-color: white;
         top: 0;
-        z-index: 3;
-        left: -100%;
-        opacity: 1;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        right: -100%;
+        justify-content: center;
+        transition: all 400ms linear;
+        z-index: 2;
+        padding: 12px 0px;
     }
-    .left-0 {
-        left: 0;
+    .show {
+        right: 0%;
     }
 }
 

@@ -37,18 +37,19 @@
 </head>
 
 <body class="bg-bodys overflow-hidden">
-    <!-- ==========Preloader========================== -->
+    <!--Preloader-->
     <div id="preloader"
-        class="min-vh-100 rating d-flex align-items-center justify-content-center bg-white position-fixed w-100 top-0 z-3 start-0">
+        class="min-vh-100 d-flex align-items-center justify-content-center bg-white position-fixed w-100 top-0 z-3 start-0">
         <div><img src="/assets/image/logo.png" alt="logo"></div>
     </div>
-    <div class=" over-layer"></div>
+
     <!-- adven -->
     <section>
         <div class="container">
             <div class="d-flex justify-content-between align-items-center py-3">
                 <div><img src="./assets/image/logo.png" alt="logo"></div>
-                <label id="nav" class="nav">
+                <input type="checkbox" id="mobileview" hidden>
+                <label for="mobileview" class="icon_box span d-lg-none" onclick="responsive()">
                     <span class="fix1"></span>
                     <span class="fix2"></span>
                     <span class="fix3"></span>
@@ -62,31 +63,31 @@
     <header>
         <nav class="border">
             <div class="container">
-                <ul
-                    class="d-flex justify-content-lg-end align-items-center gap-3 fw-normal pt_29 pb_30 menubar mb-0 px-0 ">
+                <ul class="d-flex justify-content-lg-end align-items-center gap-3 fw-normal pt_29 pb_30 menubar my_nav mb-0 px-0 "
+                    id="nav">
                     <li>
-                        <a href="#home" class="nav-hover">HOME</a>
+                        <a href="#home" class="nav-hover" id="nav">HOME</a>
                     </li>
                     <li>
-                        <a href="#sheakers" class="nav-hover">SNEAKERS KOPEN
+                        <a href="#sheakers" class="nav-hover" id="nav">SNEAKERS KOPEN
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-hover">INTERVIEWS</a>
+                        <a href="#" class="nav-hover" id="nav">INTERVIEWS</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-hover">SALE
+                        <a href="#" class="nav-hover" id="nav">SALE
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-hover">SNEAKER VAN DE DAG</a>
+                        <a href="#" class="nav-hover" id="nav">SNEAKER VAN DE DAG</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-hover">SNEAKER FORUM
+                        <a href="#" class="nav-hover" id="nav">SNEAKER FORUM
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-hover">BLOG</a>
+                        <a href="#" class="nav-hover" id="nav">BLOG</a>
                     </li>
                 </ul>
             </div>

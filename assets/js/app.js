@@ -16,44 +16,28 @@ Sub.addEventListener("click", function() {
     if (no.innerHTML > 0) { no.innerHTML = +no.innerHTML - 1; } else if (no.innerHTML <= 0) { no.innerHTML = +no.innerHTML; }
 });
 // my_nav
-let nav = document.querySelector(".nav");
-let menubar = document.querySelector(".menubar");
-let finish = document.querySelectorAll(".finish");
-let overlay = document.querySelector(".over-layer")
-let bgbody = document.querySelector(".bg-bodys");
-let fix1 = document.querySelector(".fix1");
-let fix2 = document.querySelector(".fix2");
-let fix3 = document.querySelector(".fix3");
-nav.addEventListener("click", function() {
-    menubar.classList.toggle("left-0")
-    fix1.classList.toggle("fixer1")
-    fix2.classList.toggle("fixer2")
-    fix3.classList.toggle("fixer3")
-    overlay.classList.toggle("left-0")
-    bgbody.classList.toggle("over-flow")
-    nav.classList.toggle("left-corner")
-})
-overlay.addEventListener("click", function() {
-    menubar.classList.toggle("left-0")
-    fix1.classList.toggle("fixer1")
-    fix2.classList.toggle("fixer2")
-    fix3.classList.toggle("fixer3")
-    overlay.classList.toggle("left-0")
-    bgbody.classList.toggle("over-flow")
-    nav.classList.toggle("left-corner")
-})
-finish.forEach(e => {
-    e.addEventListener("click", function() {
-        menubar.classList.remove("left-0")
-        bgbody.classList.remove("over-flow")
-        fix1.classList.toggle("fixer1")
-        overlay.classList.toggle("left-0")
-        fix2.classList.toggle("fixer2")
-        fix3.classList.toggle("fixer3")
-        nav.classList.toggle("left-corner")
+const a = document.getElementById("nav")
+const b = document.querySelector("#toggle")
+var overflow = document.querySelector(".overflow-hidden")
+var line1 = document.querySelector(".fixed1")
+var line2 = document.querySelector(".fixed2")
+var line3 = document.querySelector(".fixed3")
+
+function responsive() {
+    a.classList.toggle("show")
+    line1.classList.toggle("fixed1")
+    line2.classList.toggle("fixed2")
+    line3.classList.toggle("fixed3")
+    b.classList.toggle("#toggle")
+    overflow.classList.toggle(".overflow-hidden")
+
+}
+a.addEventListener("click", function() {
+        a.classList.toggle("show")
+        b.classList.toggle("#toggle")
+        overflow.classList.toggle(".overflow-hidden")
     })
-});
-// tab-1
+    // tab-1
 function openTabs(two, Id) {
     let i = null;
     let tabContent = document.querySelectorAll(".tabContent");
